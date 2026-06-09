@@ -174,7 +174,22 @@ function sha256(value) {
   return crypto.createHash("sha256").update(value).digest("hex");
 }
 
-function makeCacheKey({ imageBase64, model }) {
+function normalizeCacheId(value) {
+  return String(value || "")
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9:._-]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function makeCacheKey({ imageBase64, model, submissionId }) {
+  const stableSubmissionId = normalizeCacheId(submissionId);
+  if (stableSubmissionId) {
+    return sha256(stableStringify({
+      model,
+      submissionId: stableSubmissionId,
+    }));
+  }
   return sha256(stableStringify({
     model,
     image: sha256(imageBase64),
@@ -227,6 +242,8 @@ async function writeKvCache(cacheKey, payload) {
     const body = JSON.stringify({
       cacheVersion: CACHE_VERSION,
       cachedAt: new Date().toISOString(),
+      cacheId: payload.debug && payload.debug.cacheId ? payload.debug.cacheId : null,
+      model: payload.debug && payload.debug.model ? payload.debug.model : null,
       payload,
     });
     await kvCommand(["SET", kvCacheKey(cacheKey), body, "EX", CACHE_TTL_SECONDS]);
@@ -255,6 +272,8 @@ function writeDiskCache(cacheKey, payload) {
     fs.writeFileSync(cachePath, JSON.stringify({
       cacheVersion: CACHE_VERSION,
       cachedAt: new Date().toISOString(),
+      cacheId: payload.debug && payload.debug.cacheId ? payload.debug.cacheId : null,
+      model: payload.debug && payload.debug.model ? payload.debug.model : null,
       payload,
     }, null, 2));
     return true;
@@ -288,7 +307,7 @@ module.exports = async function handler(req, res) {
     return;
   }
 
-  const { imageBase64, mode, applicationData, model: requestedModel, cacheOnly } = req.body || {};
+  const { imageBase64, submissionId, mode, applicationData, model: requestedModel, cacheOnly } = req.body || {};
   if (!imageBase64 || !String(imageBase64).startsWith("data:image/")) {
     appendDebugLog({ requestId, stage: "reject_bad_image", mode: mode || "applicant" });
     res.status(400).json({ error: "imageBase64 data URL is required." });
@@ -304,10 +323,12 @@ module.exports = async function handler(req, res) {
   const cacheKey = makeCacheKey({
     imageBase64,
     model,
+    submissionId,
   });
   const requestMeta = {
     requestId,
     mode: normalizedMode,
+    submissionId: normalizeCacheId(submissionId) || null,
     imageBytesApprox,
     model,
     imageDetail,
@@ -475,7 +496,15 @@ module.exports = async function handler(req, res) {
         : null,
     });
 
-    const payload = { ...parsed, debug: { latencyMs: Date.now() - startedAt, model, cache: "miss" } };
+    const payload = {
+      ...parsed,
+      debug: {
+        latencyMs: Date.now() - startedAt,
+        model,
+        cache: "miss",
+        cacheId: normalizeCacheId(submissionId) || "image",
+      },
+    };
     const cacheWrite = await writeCache(cacheKey, payload);
     res.status(200).json({
       ...payload,

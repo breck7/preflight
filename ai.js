@@ -139,7 +139,7 @@
     return getEngine(engineId).label;
   }
 
-  async function analyzeLabel(imageBase64, mode, applicationData, engineId) {
+  async function analyzeLabel(imageBase64, mode, applicationData, engineId, options = {}) {
     const engine = getEngine(engineId);
 
     if (engine.id === "local") {
@@ -158,6 +158,7 @@
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           imageBase64,
+          submissionId: options.submissionId || null,
           mode,
           model: engine.model,
           applicationData: mode === "reviewer" ? applicationData : null,
@@ -180,7 +181,7 @@
     }
   }
 
-  async function getCachedLabelAnalysis(imageBase64, mode, applicationData, engineId) {
+  async function getCachedLabelAnalysis(imageBase64, mode, applicationData, engineId, options = {}) {
     const engine = getEngine(engineId);
     if (engine.provider !== "openai") return null;
 
@@ -189,6 +190,7 @@
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         imageBase64,
+        submissionId: options.submissionId || null,
         mode,
         model: engine.model,
         applicationData: mode === "reviewer" ? applicationData : null,

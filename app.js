@@ -439,6 +439,7 @@
           state.mode,
           state.applicationData,
           "openai:gpt-5.5",
+          { submissionId: state.submission && state.submission.submissionId },
         );
         if (requestId !== latestAnalysisRequest) return;
         if (cached) {
@@ -453,7 +454,13 @@
         }
       }
 
-      const result = await window.analyzeLabel(state.image.base64, state.mode, state.applicationData, state.engine);
+      const result = await window.analyzeLabel(
+        state.image.base64,
+        state.mode,
+        state.applicationData,
+        state.engine,
+        { submissionId: state.submission && state.submission.submissionId },
+      );
       if (requestId !== latestAnalysisRequest) return;
       state.fields = result.fields;
       state.status = "ready";
