@@ -238,6 +238,7 @@
           title: labelTitleFromFilename(image, index),
           fileName: image,
           path: `test-images/ttb-public-sample/${item.folder}/${image}`,
+          thumbPath: index === 0 ? `test-images/ttb-public-sample/thumbs/${item.folder}.jpg` : null,
         })),
         applicationData: {
           ...DEFAULT_APPLICATION_DATA,
@@ -512,7 +513,7 @@
       const title = `${submission.title} (${count} label${count === 1 ? "" : "s"})`;
       return `
         <button class="queue-thumb ${submission.submissionId === activeSubmissionId ? "active" : ""} ${count > 1 ? "multi" : ""}" type="button" data-submission-id="${escapeHtml(submission.submissionId)}" title="${escapeHtml(title)}" aria-label="${escapeHtml(title)}">
-          <img src="${escapeHtml(firstImage.path || "")}" alt="" />
+          <img src="${escapeHtml(firstImage.thumbPath || firstImage.path || "")}" alt="" loading="lazy" decoding="async" />
           <span>${index + 1}</span>
         </button>
       `;
@@ -652,6 +653,7 @@
       lines.push(`   name ${safeLine(image.fileName)}`);
       lines.push(`   title ${safeLine(image.title)}`);
       lines.push(`   path ${safeLine(image.path)}`);
+      if (image.thumbPath) lines.push(`   thumbPath ${safeLine(image.thumbPath)}`);
     });
     return lines.join("\n");
   }

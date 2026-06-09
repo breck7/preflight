@@ -64,6 +64,8 @@ The built-in sample uses 50 real public COLA submissions downloaded from the TTB
 
 The upload area shows a thumbnail queue of submissions. Clicking a thumbnail loads the whole submission, stitches its label images into one masonry-style sheet, and writes its id to the URL as `?submission=...`, so refreshing keeps the same submission. Dropping or uploading multiple images creates one new submission at the front of the queue.
 
+The public sample queue uses generated thumbnail assets in `test-images/ttb-public-sample/thumbs/` so the first page load does not fetch full-size labels for every queued submission.
+
 ## API mode
 
 Run `server.js` with an `OPENAI_API_KEY` server-side environment variable and open `/?ai=1`. The browser never receives an API key.
@@ -90,6 +92,8 @@ Request contract:
 ```
 
 Successful OpenAI responses are cached on disk in `cache/openai-label-analysis/`. The cache key includes the image bytes, mode, application metadata, selected model, image detail, max output tokens, prompt, schema, and cache version, so repeat submissions avoid duplicate API usage while prompt/schema changes invalidate old entries.
+
+On Vercel, the API uses Upstash/Vercel KV when `KV_REST_API_URL`/`KV_REST_API_TOKEN`, `UPSTASH_REDIS_REST_URL`/`UPSTASH_REDIS_REST_TOKEN`, or the `COLAPREFLIGHT_...` prefixed equivalents are present. Visit `/cached.json` to inspect summarized cache entries without exposing image data or raw payloads.
 
 ## Architecture
 

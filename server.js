@@ -4,6 +4,7 @@ const path = require("path");
 const { URL } = require("url");
 
 const analyzeLabel = require("./api/analyze-label");
+const cached = require("./api/cached");
 
 const root = __dirname;
 const port = Number(process.env.PORT || 8000);
@@ -68,6 +69,21 @@ function readJson(req) {
 }
 
 async function handleApi(req, res) {
+  if (req.url.startsWith("/cached.json") || req.url.startsWith("/api/cached")) {
+    const url = new URL(req.url, `http://${req.headers.host}`);
+    req.query = Object.fromEntries(url.searchParams.entries());
+    await cached(req, {
+      status(statusCode) {
+        this.statusCode = statusCode;
+        return this;
+      },
+      json(data) {
+        sendJson(res, this.statusCode || 200, data);
+      },
+    });
+    return;
+  }
+
   if (req.url.startsWith("/api/health")) {
     sendJson(res, 200, {
       ok: true,
@@ -147,7 +163,7 @@ function serveStatic(req, res) {
 }
 
 const server = http.createServer((req, res) => {
-  if (req.url.startsWith("/api/")) {
+  if (req.url.startsWith("/api/") || req.url.startsWith("/cached.json")) {
     handleApi(req, res);
     return;
   }

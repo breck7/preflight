@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/cached.json",
+      "destination": "/api/cached"
+    }
+  ]
+}
