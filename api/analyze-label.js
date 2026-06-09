@@ -2,10 +2,15 @@ const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
 
-const LOG_DIR = path.join(__dirname, "..", "logs");
+const IS_VERCEL = process.env.VERCEL === "1";
+const RUNTIME_ROOT = IS_VERCEL ? "/tmp/cola-preflight" : path.join(__dirname, "..");
+const LOG_DIR = process.env.COLA_LOG_DIR || path.join(RUNTIME_ROOT, "logs");
 const DEBUG_LOG_PATH = path.join(LOG_DIR, "openai-debug.ndjson");
-const CACHE_DIR = path.join(__dirname, "..", "cache", "openai-label-analysis");
+const CACHE_DIR = process.env.COLA_CACHE_DIR || path.join(RUNTIME_ROOT, "cache", "openai-label-analysis");
 const CACHE_VERSION = "cola-preflight-v5-visible-text-boxes";
+const CACHE_TTL_SECONDS = Number(process.env.COLA_CACHE_TTL_SECONDS || 60 * 60 * 24 * 14);
+const KV_REST_API_URL = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL || "";
+const KV_REST_API_TOKEN = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN || "";
 const ALLOWED_OPENAI_MODELS = new Set([
   "gpt-5.5",
 ]);
@@ -186,18 +191,70 @@ function cachePathForKey(cacheKey) {
   return path.join(CACHE_DIR, `${cacheKey}.json`);
 }
 
-function readCache(cacheKey) {
+function kvEnabled() {
+  return Boolean(KV_REST_API_URL && KV_REST_API_TOKEN);
+}
+
+function kvCacheKey(cacheKey) {
+  return `cola-preflight:${CACHE_VERSION}:${cacheKey}`;
+}
+
+async function kvCommand(command) {
+  if (!kvEnabled()) return null;
+  const response = await fetch(KV_REST_API_URL, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${KV_REST_API_TOKEN}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(command),
+  });
+  const data = await response.json().catch(() => null);
+  if (!response.ok || !data || data.error) {
+    throw new Error(data && data.error ? data.error : `KV request failed with ${response.status}`);
+  }
+  return data.result;
+}
+
+async function readKvCache(cacheKey) {
+  try {
+    const result = await kvCommand(["GET", kvCacheKey(cacheKey)]);
+    if (!result) return null;
+    const parsed = typeof result === "string" ? JSON.parse(result) : result;
+    return { ...parsed, cacheBackend: "kv" };
+  } catch (error) {
+    appendDebugLog({ stage: "kv_cache_read_error", cacheKey, error: error.message });
+    return null;
+  }
+}
+
+async function writeKvCache(cacheKey, payload) {
+  try {
+    const body = JSON.stringify({
+      cacheVersion: CACHE_VERSION,
+      cachedAt: new Date().toISOString(),
+      payload,
+    });
+    await kvCommand(["SET", kvCacheKey(cacheKey), body, "EX", CACHE_TTL_SECONDS]);
+    return true;
+  } catch (error) {
+    appendDebugLog({ stage: "kv_cache_write_error", cacheKey, error: error.message });
+    return false;
+  }
+}
+
+function readDiskCache(cacheKey) {
   try {
     const cachePath = cachePathForKey(cacheKey);
     if (!fs.existsSync(cachePath)) return null;
-    return JSON.parse(fs.readFileSync(cachePath, "utf8"));
+    return { ...JSON.parse(fs.readFileSync(cachePath, "utf8")), cacheBackend: IS_VERCEL ? "tmp" : "disk" };
   } catch (error) {
     appendDebugLog({ stage: "cache_read_error", cacheKey, error: error.message });
     return null;
   }
 }
 
-function writeCache(cacheKey, payload) {
+function writeDiskCache(cacheKey, payload) {
   try {
     fs.mkdirSync(CACHE_DIR, { recursive: true });
     const cachePath = cachePathForKey(cacheKey);
@@ -206,9 +263,25 @@ function writeCache(cacheKey, payload) {
       cachedAt: new Date().toISOString(),
       payload,
     }, null, 2));
+    return true;
   } catch (error) {
     appendDebugLog({ stage: "cache_write_error", cacheKey, error: error.message });
+    return false;
   }
+}
+
+async function readCache(cacheKey) {
+  return await readKvCache(cacheKey) || readDiskCache(cacheKey);
+}
+
+async function writeCache(cacheKey, payload) {
+  const kvStored = await writeKvCache(cacheKey, payload);
+  const diskStored = writeDiskCache(cacheKey, payload);
+  return {
+    kvStored,
+    diskStored,
+    backend: kvStored ? "kv" : diskStored ? IS_VERCEL ? "tmp" : "disk" : "none",
+  };
 }
 
 module.exports = async function handler(req, res) {
@@ -258,9 +331,13 @@ module.exports = async function handler(req, res) {
   };
 
   console.log("Analyze label request", requestMeta);
-  appendDebugLog({ stage: "request_start", ...requestMeta });
+  appendDebugLog({
+    stage: "request_start",
+    cacheBackend: kvEnabled() ? "kv+tmp" : IS_VERCEL ? "tmp" : "disk",
+    ...requestMeta,
+  });
 
-  const cached = readCache(cacheKey);
+  const cached = await readCache(cacheKey);
   if (cached && cached.payload && Array.isArray(cached.payload.fields)) {
     const latencyMs = Date.now() - startedAt;
     appendDebugLog({
@@ -268,6 +345,7 @@ module.exports = async function handler(req, res) {
       stage: "cache_hit",
       latencyMs,
       cacheKey,
+      cacheBackend: cached.cacheBackend,
       fieldCount: cached.payload.fields.length,
       cachedAt: cached.cachedAt,
     });
@@ -279,6 +357,7 @@ module.exports = async function handler(req, res) {
         latencyMs,
         model,
         cache: "hit",
+        cacheBackend: cached.cacheBackend,
         cachedAt: cached.cachedAt,
       },
     });
@@ -393,8 +472,15 @@ module.exports = async function handler(req, res) {
     });
 
     const payload = { ...parsed, debug: { latencyMs: Date.now() - startedAt, model, cache: "miss" } };
-    writeCache(cacheKey, payload);
-    res.status(200).json({ ...payload, requestId });
+    const cacheWrite = await writeCache(cacheKey, payload);
+    res.status(200).json({
+      ...payload,
+      requestId,
+      debug: {
+        ...payload.debug,
+        cacheWrite,
+      },
+    });
   } catch (error) {
     console.error("Could not analyze label", error);
     appendDebugLog({
