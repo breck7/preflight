@@ -8,6 +8,10 @@ It helps producers and importers catch obvious COLA issues before submitting to 
 
 This prototype is intentionally minimal: the label is the interface.
 
+![COLA Preflight live prototype](samples/cola-preflight-live.png)
+
+![COLA Preflight infographic](Infographic.png)
+
 ## Why
 
 The prototype reduces invalid COLA submissions upstream and gives reviewers a faster visual verification layer downstream. It focuses on the high-volume visual matching work: brand, class/type, alcohol content, net contents, bottler/producer, origin, and government warning.
