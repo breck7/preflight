@@ -9,8 +9,8 @@ const DEBUG_LOG_PATH = path.join(LOG_DIR, "openai-debug.ndjson");
 const CACHE_DIR = process.env.COLA_CACHE_DIR || path.join(RUNTIME_ROOT, "cache", "openai-label-analysis");
 const CACHE_VERSION = "cola-preflight-v5-visible-text-boxes";
 const CACHE_TTL_SECONDS = Number(process.env.COLA_CACHE_TTL_SECONDS || 60 * 60 * 24 * 14);
-const KV_REST_API_URL = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL || "";
-const KV_REST_API_TOKEN = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN || "";
+const KV_REST_API_URL = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL || process.env.COLAPREFLIGHT_KV_REST_API_URL || "";
+const KV_REST_API_TOKEN = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN || process.env.COLAPREFLIGHT_KV_REST_API_TOKEN || "";
 const ALLOWED_OPENAI_MODELS = new Set([
   "gpt-5.5",
 ]);
