@@ -184,13 +184,14 @@
   async function getCachedLabelAnalysis(imageBase64, mode, applicationData, engineId, options = {}) {
     const engine = getEngine(engineId);
     if (engine.provider !== "openai") return null;
+    const submissionId = options.submissionId || null;
 
     const response = await fetch("/api/analyze-label", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        imageBase64,
-        submissionId: options.submissionId || null,
+        imageBase64: submissionId ? null : imageBase64,
+        submissionId,
         mode,
         model: engine.model,
         applicationData: mode === "reviewer" ? applicationData : null,

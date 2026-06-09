@@ -332,6 +332,7 @@
     render();
 
     try {
+      const cachedAnalysisPromise = getInitialCachedAnalysis(submission);
       const stitched = await stitchSubmissionImages(submission);
       if (requestId !== latestAnalysisRequest) return;
       if (activeStitchedUrl) URL.revokeObjectURL(activeStitchedUrl);
@@ -345,13 +346,38 @@
       if (requestId !== latestAnalysisRequest) return;
       if (options.updateUrl) updateSubmissionUrl(submission);
       if (options.updateUrl === false && submission.type === "upload") clearSubmissionUrl();
-      runAnalysis();
+      const cachedAnalysis = await cachedAnalysisPromise;
+      if (requestId !== latestAnalysisRequest) return;
+      if (cachedAnalysis) {
+        state.engine = "openai:gpt-5.5";
+        state.fields = cachedAnalysis.fields;
+        state.status = "ready";
+        state.error = null;
+        state.selectedFieldId = null;
+        render();
+        logScroll("cached GPT analysis loaded");
+      } else {
+        runAnalysis();
+      }
     } catch (error) {
       if (requestId !== latestAnalysisRequest) return;
       state.status = "error";
       state.error = "Could not load that submission.";
       render();
     }
+  }
+
+  function getInitialCachedAnalysis(submission) {
+    if (userSelectedEngine || state.engine !== "local" || !submission || submission.type === "upload") {
+      return Promise.resolve(null);
+    }
+    return window.getCachedLabelAnalysis(
+      null,
+      state.mode,
+      state.applicationData,
+      "openai:gpt-5.5",
+      { submissionId: submission.submissionId },
+    ).catch(() => null);
   }
 
   async function stitchSubmissionImages(submission) {
@@ -433,7 +459,7 @@
     renderStatus();
 
     try {
-      if (!userSelectedEngine && state.engine === "local") {
+      if (!userSelectedEngine && state.engine === "local" && state.submission && state.submission.type === "upload") {
         const cached = await window.getCachedLabelAnalysis(
           state.image.base64,
           state.mode,

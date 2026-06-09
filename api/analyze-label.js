@@ -308,9 +308,11 @@ module.exports = async function handler(req, res) {
   }
 
   const { imageBase64, submissionId, mode, applicationData, model: requestedModel, cacheOnly } = req.body || {};
-  if (!imageBase64 || !String(imageBase64).startsWith("data:image/")) {
+  const hasImage = Boolean(imageBase64 && String(imageBase64).startsWith("data:image/"));
+  const canLookupBySubmission = Boolean(cacheOnly && normalizeCacheId(submissionId));
+  if (!hasImage && !canLookupBySubmission) {
     appendDebugLog({ requestId, stage: "reject_bad_image", mode: mode || "applicant" });
-    res.status(400).json({ error: "imageBase64 data URL is required." });
+    res.status(400).json({ error: "imageBase64 data URL is required unless cacheOnly has submissionId." });
     return;
   }
 
@@ -319,7 +321,7 @@ module.exports = async function handler(req, res) {
   const imageDetail = process.env.OPENAI_IMAGE_DETAIL || "auto";
   const maxOutputTokens = Number(process.env.OPENAI_MAX_OUTPUT_TOKENS || 1200);
   const normalizedMode = mode || "applicant";
-  const imageBytesApprox = Math.round(String(imageBase64).length * 0.75);
+  const imageBytesApprox = hasImage ? Math.round(String(imageBase64).length * 0.75) : 0;
   const cacheKey = makeCacheKey({
     imageBase64,
     model,
