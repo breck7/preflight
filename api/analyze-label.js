@@ -7,7 +7,8 @@ const RUNTIME_ROOT = IS_VERCEL ? "/tmp/cola-preflight" : path.join(__dirname, ".
 const LOG_DIR = process.env.COLA_LOG_DIR || path.join(RUNTIME_ROOT, "logs");
 const DEBUG_LOG_PATH = path.join(LOG_DIR, "openai-debug.ndjson");
 const CACHE_DIR = process.env.COLA_CACHE_DIR || path.join(RUNTIME_ROOT, "cache", "openai-label-analysis");
-const CACHE_VERSION = "cola-preflight-v5-visible-text-boxes";
+const CACHE_VERSION = "model-image";
+const KV_CACHE_PREFIX = "cola-preflight";
 const CACHE_TTL_SECONDS = Number(process.env.COLA_CACHE_TTL_SECONDS || 60 * 60 * 24 * 14);
 const KV_REST_API_URL = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL || process.env.COLAPREFLIGHT_KV_REST_API_URL || "";
 const KV_REST_API_TOKEN = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN || process.env.COLAPREFLIGHT_KV_REST_API_TOKEN || "";
@@ -173,17 +174,10 @@ function sha256(value) {
   return crypto.createHash("sha256").update(value).digest("hex");
 }
 
-function makeCacheKey({ imageBase64, mode, applicationData, model, imageDetail, maxOutputTokens }) {
+function makeCacheKey({ imageBase64, model }) {
   return sha256(stableStringify({
-    version: CACHE_VERSION,
-    prompt: sha256(PROMPT),
-    schema: sha256(stableStringify(FIELD_SCHEMA)),
-    image: sha256(imageBase64),
-    mode,
-    applicationData: applicationData || null,
     model,
-    imageDetail,
-    maxOutputTokens,
+    image: sha256(imageBase64),
   }));
 }
 
@@ -196,7 +190,7 @@ function kvEnabled() {
 }
 
 function kvCacheKey(cacheKey) {
-  return `cola-preflight:${CACHE_VERSION}:${cacheKey}`;
+  return `${KV_CACHE_PREFIX}:${cacheKey}`;
 }
 
 async function kvCommand(command) {
@@ -309,11 +303,7 @@ module.exports = async function handler(req, res) {
   const imageBytesApprox = Math.round(String(imageBase64).length * 0.75);
   const cacheKey = makeCacheKey({
     imageBase64,
-    mode: normalizedMode,
-    applicationData,
     model,
-    imageDetail,
-    maxOutputTokens,
   });
   const requestMeta = {
     requestId,

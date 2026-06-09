@@ -4,10 +4,10 @@ const path = require("path");
 const IS_VERCEL = process.env.VERCEL === "1";
 const RUNTIME_ROOT = IS_VERCEL ? "/tmp/cola-preflight" : path.join(__dirname, "..");
 const CACHE_DIR = process.env.COLA_CACHE_DIR || path.join(RUNTIME_ROOT, "cache", "openai-label-analysis");
-const CACHE_VERSION = "cola-preflight-v5-visible-text-boxes";
+const CACHE_VERSION = "model-image";
 const KV_REST_API_URL = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL || process.env.COLAPREFLIGHT_KV_REST_API_URL || "";
 const KV_REST_API_TOKEN = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN || process.env.COLAPREFLIGHT_KV_REST_API_TOKEN || "";
-const KV_PREFIX = `cola-preflight:${CACHE_VERSION}:`;
+const KV_PREFIX = "cola-preflight:";
 
 function kvEnabled() {
   return Boolean(KV_REST_API_URL && KV_REST_API_TOKEN);
