@@ -1,0 +1,33 @@
+{
+  "source": "TTB Public COLA Registry",
+  "sourceUrl": "https://www.ttbonline.gov/colasonline/viewColaDetails.do?action=publicFormDisplay&ttbid=26034001000579",
+  "sampledAt": "2026-06-09T01:28:56.343Z",
+  "search": {
+    "dateCompletedFrom": "06/01/2026",
+    "dateCompletedTo": "06/08/2026"
+  },
+  "row": {
+    "TTB ID": "'26034001000579'",
+    "Permit No.": "BWN-CA-23718",
+    "Serial Number": "26DCCS",
+    "Completed Date": "06/02/2026",
+    "Fanciful Name": "TOAST TO TRIUMPH VADIYAAN",
+    "Brand Name": "DEEPAK CELLARS",
+    "Origin": "01",
+    "Origin Desc": "CALIFORNIA",
+    "Class/Type": "80",
+    "Class/Type Desc": "TABLE RED WINE"
+  },
+  "ttbId": "26034001000579",
+  "imageCount": 1,
+  "images": [
+    {
+      "href": "/colasonline/publicViewAttachment.do?filename=DeepakCellars_Labels_R5CABSAV-Vadiyaan.jpg&filetype=l",
+      "filename": "DeepakCellars_Labels_R5CABSAV-Vadiyaan.jpg",
+      "label": "Brand (front) or keg collar",
+      "sourceUrl": "https://www.ttbonline.gov/colasonline/publicViewAttachment.do?filename=DeepakCellars_Labels_R5CABSAV-Vadiyaan.jpg&filetype=l",
+      "file": "01-brand-front-or-keg-collar.jpg",
+      "bytes": 1161873
+    }
+  ]
+}

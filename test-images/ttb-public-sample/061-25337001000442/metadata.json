@@ -1,0 +1,49 @@
+{
+  "source": "TTB Public COLA Registry",
+  "sourceUrl": "https://www.ttbonline.gov/colasonline/viewColaDetails.do?action=publicFormDisplay&ttbid=25337001000442",
+  "sampledAt": "2026-06-09T01:28:46.144Z",
+  "search": {
+    "dateCompletedFrom": "06/01/2026",
+    "dateCompletedTo": "06/08/2026"
+  },
+  "row": {
+    "TTB ID": "'25337001000442'",
+    "Permit No.": "DSP-KY-20176",
+    "Serial Number": "250016",
+    "Completed Date": "06/05/2026",
+    "Fanciful Name": "",
+    "Brand Name": "KENTUCKY RAMBLER",
+    "Origin": "22",
+    "Origin Desc": "KENTUCKY",
+    "Class/Type": "101",
+    "Class/Type Desc": "STRAIGHT BOURBON WHISKY"
+  },
+  "ttbId": "25337001000442",
+  "imageCount": 3,
+  "images": [
+    {
+      "href": "/colasonline/publicViewAttachment.do?filename=Kentucky Rambler Core Front.jpg&filetype=l",
+      "filename": "Kentucky Rambler Core Front.jpg",
+      "label": "Brand (front) or keg collar",
+      "sourceUrl": "https://www.ttbonline.gov/colasonline/publicViewAttachment.do?filename=Kentucky Rambler Core Front.jpg&filetype=l",
+      "file": "01-brand-front-or-keg-collar.jpg",
+      "bytes": 437072
+    },
+    {
+      "href": "/colasonline/publicViewAttachment.do?filename=Kentucky Rambler Core Back Label HRD.jpg&filetype=l",
+      "filename": "Kentucky Rambler Core Back Label HRD.jpg",
+      "label": "Back",
+      "sourceUrl": "https://www.ttbonline.gov/colasonline/publicViewAttachment.do?filename=Kentucky Rambler Core Back Label HRD.jpg&filetype=l",
+      "file": "02-back.jpg",
+      "bytes": 354397
+    },
+    {
+      "href": "/colasonline/publicViewAttachment.do?filename=Kentucky Rambler Core Neck Label - 108 x 30.png&filetype=l",
+      "filename": "Kentucky Rambler Core Neck Label - 108 x 30.png",
+      "label": "Neck",
+      "sourceUrl": "https://www.ttbonline.gov/colasonline/publicViewAttachment.do?filename=Kentucky Rambler Core Neck Label - 108 x 30.png&filetype=l",
+      "file": "03-neck.png",
+      "bytes": 91511
+    }
+  ]
+}

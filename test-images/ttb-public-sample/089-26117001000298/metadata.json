@@ -1,0 +1,33 @@
+{
+  "source": "TTB Public COLA Registry",
+  "sourceUrl": "https://www.ttbonline.gov/colasonline/viewColaDetails.do?action=publicFormDisplay&ttbid=26117001000298",
+  "sampledAt": "2026-06-09T01:29:28.306Z",
+  "search": {
+    "dateCompletedFrom": "06/01/2026",
+    "dateCompletedTo": "06/08/2026"
+  },
+  "row": {
+    "TTB ID": "'26117001000298'",
+    "Permit No.": "BWN-MI-21131",
+    "Serial Number": "264041",
+    "Completed Date": "06/03/2026",
+    "Fanciful Name": "FRAGOLA ROSA",
+    "Brand Name": "SOCIAL & CO",
+    "Origin": "27",
+    "Origin Desc": "MINNESOTA",
+    "Class/Type": "85",
+    "Class/Type Desc": "CARBONATED WINE"
+  },
+  "ttbId": "26117001000298",
+  "imageCount": 1,
+  "images": [
+    {
+      "href": "/colasonline/publicViewAttachment.do?filename=fragola keg grand rapids.jpg&filetype=l",
+      "filename": "fragola keg grand rapids.jpg",
+      "label": "Brand (front) or keg collar",
+      "sourceUrl": "https://www.ttbonline.gov/colasonline/publicViewAttachment.do?filename=fragola keg grand rapids.jpg&filetype=l",
+      "file": "01-brand-front-or-keg-collar.jpg",
+      "bytes": 244164
+    }
+  ]
+}

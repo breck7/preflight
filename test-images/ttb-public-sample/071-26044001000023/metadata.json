@@ -1,0 +1,41 @@
+{
+  "source": "TTB Public COLA Registry",
+  "sourceUrl": "https://www.ttbonline.gov/colasonline/viewColaDetails.do?action=publicFormDisplay&ttbid=26044001000023",
+  "sampledAt": "2026-06-09T01:28:58.972Z",
+  "search": {
+    "dateCompletedFrom": "06/01/2026",
+    "dateCompletedTo": "06/08/2026"
+  },
+  "row": {
+    "TTB ID": "'26044001000023'",
+    "Permit No.": "CA-I-24204",
+    "Serial Number": "26JA27",
+    "Completed Date": "06/03/2026",
+    "Fanciful Name": "",
+    "Brand Name": "L'ANGELUS",
+    "Origin": "51",
+    "Origin Desc": "FRANCE",
+    "Class/Type": "80",
+    "Class/Type Desc": "TABLE RED WINE"
+  },
+  "ttbId": "26044001000023",
+  "imageCount": 2,
+  "images": [
+    {
+      "href": "/colasonline/publicViewAttachment.do?filename=31- Angelus 1961 BK.jpg&filetype=l",
+      "filename": "31- Angelus 1961 BK.jpg",
+      "label": "Brand (front) or keg collar",
+      "sourceUrl": "https://www.ttbonline.gov/colasonline/publicViewAttachment.do?filename=31- Angelus 1961 BK.jpg&filetype=l",
+      "file": "01-brand-front-or-keg-collar.jpg",
+      "bytes": 205536
+    },
+    {
+      "href": "/colasonline/publicViewAttachment.do?filename=31- Angelus 1961 fr v2.jpg&filetype=l",
+      "filename": "31- Angelus 1961 fr v2.jpg",
+      "label": "Back",
+      "sourceUrl": "https://www.ttbonline.gov/colasonline/publicViewAttachment.do?filename=31- Angelus 1961 fr v2.jpg&filetype=l",
+      "file": "02-back.jpg",
+      "bytes": 83015
+    }
+  ]
+}

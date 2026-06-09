@@ -1,0 +1,33 @@
+{
+  "source": "TTB Public COLA Registry",
+  "sourceUrl": "https://www.ttbonline.gov/colasonline/viewColaDetails.do?action=publicFormDisplay&ttbid=26100001000205",
+  "sampledAt": "2026-06-09T01:29:16.229Z",
+  "search": {
+    "dateCompletedFrom": "06/01/2026",
+    "dateCompletedTo": "06/08/2026"
+  },
+  "row": {
+    "TTB ID": "'26100001000205'",
+    "Permit No.": "DSP-NY-15004",
+    "Serial Number": "260041",
+    "Completed Date": "06/03/2026",
+    "Fanciful Name": "",
+    "Brand Name": "FLAVIAR",
+    "Origin": "02",
+    "Origin Desc": "NEW YORK",
+    "Class/Type": "101",
+    "Class/Type Desc": "STRAIGHT BOURBON WHISKY"
+  },
+  "ttbId": "26100001000205",
+  "imageCount": 1,
+  "images": [
+    {
+      "href": "/colasonline/publicViewAttachment.do?filename=Flaviar Advent - 24.png&filetype=l",
+      "filename": "Flaviar Advent - 24.png",
+      "label": "Brand (front) or keg collar",
+      "sourceUrl": "https://www.ttbonline.gov/colasonline/publicViewAttachment.do?filename=Flaviar Advent - 24.png&filetype=l",
+      "file": "01-brand-front-or-keg-collar.png",
+      "bytes": 173602
+    }
+  ]
+}

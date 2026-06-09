@@ -1,0 +1,41 @@
+{
+  "source": "TTB Public COLA Registry",
+  "sourceUrl": "https://www.ttbonline.gov/colasonline/viewColaDetails.do?action=publicFormDisplay&ttbid=26119001000324",
+  "sampledAt": "2026-06-09T01:29:33.941Z",
+  "search": {
+    "dateCompletedFrom": "06/01/2026",
+    "dateCompletedTo": "06/08/2026"
+  },
+  "row": {
+    "TTB ID": "'26119001000324'",
+    "Permit No.": "RI-I-21058",
+    "Serial Number": "260505",
+    "Completed Date": "06/03/2026",
+    "Fanciful Name": "CAMPIELLO KUMQUAT BITTER ROSSO",
+    "Brand Name": "LAZARIS ARTISAN DISTILLERY",
+    "Origin": "57",
+    "Origin Desc": "GREECE",
+    "Class/Type": "669",
+    "Class/Type Desc": "OTHER HERB & SEED CORDIALS/LIQUEURS"
+  },
+  "ttbId": "26119001000324",
+  "imageCount": 2,
+  "images": [
+    {
+      "href": "/colasonline/publicViewAttachment.do?filename=campiellofront.jpg&filetype=l",
+      "filename": "campiellofront.jpg",
+      "label": "Brand (front) or keg collar",
+      "sourceUrl": "https://www.ttbonline.gov/colasonline/publicViewAttachment.do?filename=campiellofront.jpg&filetype=l",
+      "file": "01-brand-front-or-keg-collar.jpg",
+      "bytes": 1071764
+    },
+    {
+      "href": "/colasonline/publicViewAttachment.do?filename=campielloback.jpg&filetype=l",
+      "filename": "campielloback.jpg",
+      "label": "Back",
+      "sourceUrl": "https://www.ttbonline.gov/colasonline/publicViewAttachment.do?filename=campielloback.jpg&filetype=l",
+      "file": "02-back.jpg",
+      "bytes": 1504186
+    }
+  ]
+}

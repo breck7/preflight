@@ -1,0 +1,33 @@
+{
+  "source": "TTB Public COLA Registry",
+  "sourceUrl": "https://www.ttbonline.gov/colasonline/viewColaDetails.do?action=publicFormDisplay&ttbid=26119001000606",
+  "sampledAt": "2026-06-09T01:29:36.606Z",
+  "search": {
+    "dateCompletedFrom": "06/01/2026",
+    "dateCompletedTo": "06/08/2026"
+  },
+  "row": {
+    "TTB ID": "'26119001000606'",
+    "Permit No.": "GA-I-21219",
+    "Serial Number": "260002",
+    "Completed Date": "06/02/2026",
+    "Fanciful Name": "CANELAZINHA",
+    "Brand Name": "O' SHOT DA ALEGRIA",
+    "Origin": "67",
+    "Origin Desc": "BRAZIL",
+    "Class/Type": "699",
+    "Class/Type Desc": "OTHER SPECIALTIES & PROPRIETARIES"
+  },
+  "ttbId": "26119001000606",
+  "imageCount": 1,
+  "images": [
+    {
+      "href": "/colasonline/publicViewAttachment.do?filename=CanelaZinha RV.jpg&filetype=l",
+      "filename": "CanelaZinha RV.jpg",
+      "label": "Brand (front) or keg collar",
+      "sourceUrl": "https://www.ttbonline.gov/colasonline/publicViewAttachment.do?filename=CanelaZinha RV.jpg&filetype=l",
+      "file": "01-brand-front-or-keg-collar.jpg",
+      "bytes": 313230
+    }
+  ]
+}

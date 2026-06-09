@@ -1,0 +1,33 @@
+{
+  "source": "TTB Public COLA Registry",
+  "sourceUrl": "https://www.ttbonline.gov/colasonline/viewColaDetails.do?action=publicFormDisplay&ttbid=26083001000403",
+  "sampledAt": "2026-06-09T01:29:15.315Z",
+  "search": {
+    "dateCompletedFrom": "06/01/2026",
+    "dateCompletedTo": "06/08/2026"
+  },
+  "row": {
+    "TTB ID": "'26083001000403'",
+    "Permit No.": "DSP-WI-20014",
+    "Serial Number": "260001",
+    "Completed Date": "06/04/2026",
+    "Fanciful Name": "SQUAW LAKE",
+    "Brand Name": "EAGLE'S NEST",
+    "Origin": "48",
+    "Origin Desc": "WISCONSIN",
+    "Class/Type": "141",
+    "Class/Type Desc": "BOURBON WHISKY"
+  },
+  "ttbId": "26083001000403",
+  "imageCount": 1,
+  "images": [
+    {
+      "href": "/colasonline/publicViewAttachment.do?filename=Screenshot 2026-03-24 114515.png&filetype=l",
+      "filename": "Screenshot 2026-03-24 114515.png",
+      "label": "Brand (front) or keg collar",
+      "sourceUrl": "https://www.ttbonline.gov/colasonline/publicViewAttachment.do?filename=Screenshot 2026-03-24 114515.png&filetype=l",
+      "file": "01-brand-front-or-keg-collar.png",
+      "bytes": 1074449
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "source": "TTB Public COLA Registry",
+  "sourceUrl": "https://www.ttbonline.gov/colasonline/viewColaDetails.do?action=publicFormDisplay&ttbid=25335001000934",
+  "sampledAt": "2026-06-09T01:28:36.114Z",
+  "search": {
+    "dateCompletedFrom": "06/01/2026",
+    "dateCompletedTo": "06/08/2026"
+  },
+  "row": {
+    "TTB ID": "'25335001000934'",
+    "Permit No.": "DSP-WI-20002",
+    "Serial Number": "252102",
+    "Completed Date": "06/04/2026",
+    "Fanciful Name": "CACAO MARTINI",
+    "Brand Name": "MADWOMAN",
+    "Origin": "48",
+    "Origin Desc": "WISCONSIN",
+    "Class/Type": "739",
+    "Class/Type Desc": "OTHER COCKTAILS (UNDER 48 PROOF)"
+  },
+  "ttbId": "25335001000934",
+  "imageCount": 1,
+  "images": [
+    {
+      "href": "/colasonline/publicViewAttachment.do?filename=Cacao Martini.jpg&filetype=l",
+      "filename": "Cacao Martini.jpg",
+      "label": "Brand (front) or keg collar",
+      "sourceUrl": "https://www.ttbonline.gov/colasonline/publicViewAttachment.do?filename=Cacao Martini.jpg&filetype=l",
+      "file": "01-brand-front-or-keg-collar.jpg",
+      "bytes": 165407
+    }
+  ]
+}

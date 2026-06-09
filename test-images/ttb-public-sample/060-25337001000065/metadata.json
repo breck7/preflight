@@ -1,0 +1,41 @@
+{
+  "source": "TTB Public COLA Registry",
+  "sourceUrl": "https://www.ttbonline.gov/colasonline/viewColaDetails.do?action=publicFormDisplay&ttbid=25337001000065",
+  "sampledAt": "2026-06-09T01:28:43.556Z",
+  "search": {
+    "dateCompletedFrom": "06/01/2026",
+    "dateCompletedTo": "06/08/2026"
+  },
+  "row": {
+    "TTB ID": "'25337001000065'",
+    "Permit No.": "DSP-NH-21029",
+    "Serial Number": "250045",
+    "Completed Date": "06/04/2026",
+    "Fanciful Name": "RIPARIAN",
+    "Brand Name": "BATSON RIVER",
+    "Origin": "33",
+    "Origin Desc": "NEW HAMPSHIRE",
+    "Class/Type": "219",
+    "Class/Type Desc": "OTHER GIN"
+  },
+  "ttbId": "25337001000065",
+  "imageCount": 2,
+  "images": [
+    {
+      "href": "/colasonline/publicViewAttachment.do?filename=gin front.jpg&filetype=l",
+      "filename": "gin front.jpg",
+      "label": "Brand (front) or keg collar",
+      "sourceUrl": "https://www.ttbonline.gov/colasonline/publicViewAttachment.do?filename=gin front.jpg&filetype=l",
+      "file": "01-brand-front-or-keg-collar.jpg",
+      "bytes": 81808
+    },
+    {
+      "href": "/colasonline/publicViewAttachment.do?filename=gin back.jpg&filetype=l",
+      "filename": "gin back.jpg",
+      "label": "Back",
+      "sourceUrl": "https://www.ttbonline.gov/colasonline/publicViewAttachment.do?filename=gin back.jpg&filetype=l",
+      "file": "02-back.jpg",
+      "bytes": 110226
+    }
+  ]
+}

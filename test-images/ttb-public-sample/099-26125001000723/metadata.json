@@ -1,0 +1,41 @@
+{
+  "source": "TTB Public COLA Registry",
+  "sourceUrl": "https://www.ttbonline.gov/colasonline/viewColaDetails.do?action=publicFormDisplay&ttbid=26125001000723",
+  "sampledAt": "2026-06-09T01:29:43.433Z",
+  "search": {
+    "dateCompletedFrom": "06/01/2026",
+    "dateCompletedTo": "06/08/2026"
+  },
+  "row": {
+    "TTB ID": "'26125001000723'",
+    "Permit No.": "BWN-CA-21364",
+    "Serial Number": "26VO25",
+    "Completed Date": "06/05/2026",
+    "Fanciful Name": "",
+    "Brand Name": "FOUR LANTERNS WINERY",
+    "Origin": "01",
+    "Origin Desc": "CALIFORNIA",
+    "Class/Type": "88",
+    "Class/Type Desc": "DESSERT /PORT/SHERRY/(COOKING) WINE"
+  },
+  "ttbId": "26125001000723",
+  "imageCount": 2,
+  "images": [
+    {
+      "href": "/colasonline/publicViewAttachment.do?filename=FourLanterns-2025-Viognier-TTB-Front.jpg&filetype=l",
+      "filename": "FourLanterns-2025-Viognier-TTB-Front.jpg",
+      "label": "Brand (front) or keg collar",
+      "sourceUrl": "https://www.ttbonline.gov/colasonline/publicViewAttachment.do?filename=FourLanterns-2025-Viognier-TTB-Front.jpg&filetype=l",
+      "file": "01-brand-front-or-keg-collar.jpg",
+      "bytes": 228479
+    },
+    {
+      "href": "/colasonline/publicViewAttachment.do?filename=FourLanterns-2025-Viognier-TTB-Back.jpg&filetype=l",
+      "filename": "FourLanterns-2025-Viognier-TTB-Back.jpg",
+      "label": "Back",
+      "sourceUrl": "https://www.ttbonline.gov/colasonline/publicViewAttachment.do?filename=FourLanterns-2025-Viognier-TTB-Back.jpg&filetype=l",
+      "file": "02-back.jpg",
+      "bytes": 301757
+    }
+  ]
+}

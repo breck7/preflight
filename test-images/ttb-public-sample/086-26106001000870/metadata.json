@@ -1,0 +1,41 @@
+{
+  "source": "TTB Public COLA Registry",
+  "sourceUrl": "https://www.ttbonline.gov/colasonline/viewColaDetails.do?action=publicFormDisplay&ttbid=26106001000870",
+  "sampledAt": "2026-06-09T01:29:19.758Z",
+  "search": {
+    "dateCompletedFrom": "06/01/2026",
+    "dateCompletedTo": "06/08/2026"
+  },
+  "row": {
+    "TTB ID": "'26106001000870'",
+    "Permit No.": "FL-I-22104",
+    "Serial Number": "262602",
+    "Completed Date": "06/01/2026",
+    "Fanciful Name": "METODO CLASSICO BRUT",
+    "Brand Name": "GOZZI",
+    "Origin": "50",
+    "Origin Desc": "ITALY",
+    "Class/Type": "84",
+    "Class/Type Desc": "SPARKLING WINE/CHAMPAGNE"
+  },
+  "ttbId": "26106001000870",
+  "imageCount": 2,
+  "images": [
+    {
+      "href": "/colasonline/publicViewAttachment.do?filename=GOZZI METODO front.jpg&filetype=l",
+      "filename": "GOZZI METODO front.jpg",
+      "label": "Brand (front) or keg collar",
+      "sourceUrl": "https://www.ttbonline.gov/colasonline/publicViewAttachment.do?filename=GOZZI METODO front.jpg&filetype=l",
+      "file": "01-brand-front-or-keg-collar.jpg",
+      "bytes": 114095
+    },
+    {
+      "href": "/colasonline/publicViewAttachment.do?filename=GOZZI-METODO CLASSICO BACK.jpg&filetype=l",
+      "filename": "GOZZI-METODO CLASSICO BACK.jpg",
+      "label": "Back",
+      "sourceUrl": "https://www.ttbonline.gov/colasonline/publicViewAttachment.do?filename=GOZZI-METODO CLASSICO BACK.jpg&filetype=l",
+      "file": "02-back.jpg",
+      "bytes": 90190
+    }
+  ]
+}

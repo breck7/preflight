@@ -1,0 +1,41 @@
+{
+  "source": "TTB Public COLA Registry",
+  "sourceUrl": "https://www.ttbonline.gov/colasonline/viewColaDetails.do?action=publicFormDisplay&ttbid=25336001000189",
+  "sampledAt": "2026-06-09T01:28:39.815Z",
+  "search": {
+    "dateCompletedFrom": "06/01/2026",
+    "dateCompletedTo": "06/08/2026"
+  },
+  "row": {
+    "TTB ID": "'25336001000189'",
+    "Permit No.": "NY-I-15423",
+    "Serial Number": "25#980",
+    "Completed Date": "06/04/2026",
+    "Fanciful Name": "AMARO",
+    "Brand Name": "RAMAZZOTTI",
+    "Origin": "50",
+    "Origin Desc": "ITALY",
+    "Class/Type": "669",
+    "Class/Type Desc": "OTHER HERB & SEED CORDIALS/LIQUEURS"
+  },
+  "ttbId": "25336001000189",
+  "imageCount": 2,
+  "images": [
+    {
+      "href": "/colasonline/publicViewAttachment.do?filename=Amaro front label.jpg&filetype=l",
+      "filename": "Amaro front label.jpg",
+      "label": "Brand (front) or keg collar",
+      "sourceUrl": "https://www.ttbonline.gov/colasonline/publicViewAttachment.do?filename=Amaro front label.jpg&filetype=l",
+      "file": "01-brand-front-or-keg-collar.jpg",
+      "bytes": 85578
+    },
+    {
+      "href": "/colasonline/publicViewAttachment.do?filename=Amaro back label.jpg&filetype=l",
+      "filename": "Amaro back label.jpg",
+      "label": "Back",
+      "sourceUrl": "https://www.ttbonline.gov/colasonline/publicViewAttachment.do?filename=Amaro back label.jpg&filetype=l",
+      "file": "02-back.jpg",
+      "bytes": 581124
+    }
+  ]
+}

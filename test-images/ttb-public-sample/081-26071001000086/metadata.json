@@ -1,0 +1,41 @@
+{
+  "source": "TTB Public COLA Registry",
+  "sourceUrl": "https://www.ttbonline.gov/colasonline/viewColaDetails.do?action=publicFormDisplay&ttbid=26071001000086",
+  "sampledAt": "2026-06-09T01:29:14.378Z",
+  "search": {
+    "dateCompletedFrom": "06/01/2026",
+    "dateCompletedTo": "06/08/2026"
+  },
+  "row": {
+    "TTB ID": "'26071001000086'",
+    "Permit No.": "BW-MO-146",
+    "Serial Number": "26SPTP",
+    "Completed Date": "06/05/2026",
+    "Fanciful Name": "",
+    "Brand Name": "SEVEN SPRINGS WINERY",
+    "Origin": "00",
+    "Origin Desc": "AMERICAN",
+    "Class/Type": "80",
+    "Class/Type Desc": "TABLE RED WINE"
+  },
+  "ttbId": "26071001000086",
+  "imageCount": 2,
+  "images": [
+    {
+      "href": "/colasonline/publicViewAttachment.do?filename=7SW Tempranillofrontrev.jpg&filetype=l",
+      "filename": "7SW Tempranillofrontrev.jpg",
+      "label": "Brand (front) or keg collar",
+      "sourceUrl": "https://www.ttbonline.gov/colasonline/publicViewAttachment.do?filename=7SW Tempranillofrontrev.jpg&filetype=l",
+      "file": "01-brand-front-or-keg-collar.jpg",
+      "bytes": 916252
+    },
+    {
+      "href": "/colasonline/publicViewAttachment.do?filename=7SW Tempranillobackrev.jpg&filetype=l",
+      "filename": "7SW Tempranillobackrev.jpg",
+      "label": "Back",
+      "sourceUrl": "https://www.ttbonline.gov/colasonline/publicViewAttachment.do?filename=7SW Tempranillobackrev.jpg&filetype=l",
+      "file": "02-back.jpg",
+      "bytes": 1154705
+    }
+  ]
+}

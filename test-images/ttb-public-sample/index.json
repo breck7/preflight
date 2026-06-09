@@ -1,0 +1,647 @@
+{
+  "source": "TTB Public COLA Registry",
+  "sampledAt": "2026-06-09T01:29:44.798Z",
+  "search": {
+    "dateCompletedFrom": "06/01/2026",
+    "dateCompletedTo": "06/08/2026"
+  },
+  "requestedLimit": 50,
+  "downloadedSubmissions": 50,
+  "histogram": {
+    "1": 22,
+    "2": 26,
+    "3": 2
+  },
+  "submissions": [
+    {
+      "ttbId": "25329001000841",
+      "imageCount": 1,
+      "folder": "051-25329001000841",
+      "brandName": "MINUTE MAID SPIKED",
+      "fancifulName": "BERRY PUNCH",
+      "classType": "VODKA SPECIALTIES",
+      "completedDate": "06/03/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg"
+      ]
+    },
+    {
+      "ttbId": "25329001000848",
+      "imageCount": 1,
+      "folder": "052-25329001000848",
+      "brandName": "MINUTE MAID SPIKED",
+      "fancifulName": "CITRUS PUNCH",
+      "classType": "VODKA SPECIALTIES",
+      "completedDate": "06/03/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg"
+      ]
+    },
+    {
+      "ttbId": "25332001000104",
+      "imageCount": 1,
+      "folder": "053-25332001000104",
+      "brandName": "FRANCESA EST'D. 1993",
+      "fancifulName": "AGAVE JERA SIDECAR",
+      "classType": "OTHER SPECIALTIES & PROPRIETARIES",
+      "completedDate": "06/03/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.png"
+      ]
+    },
+    {
+      "ttbId": "25335001000934",
+      "imageCount": 1,
+      "folder": "054-25335001000934",
+      "brandName": "MADWOMAN",
+      "fancifulName": "CACAO MARTINI",
+      "classType": "OTHER COCKTAILS (UNDER 48 PROOF)",
+      "completedDate": "06/04/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg"
+      ]
+    },
+    {
+      "ttbId": "25335001000943",
+      "imageCount": 1,
+      "folder": "055-25335001000943",
+      "brandName": "MADWOMAN",
+      "fancifulName": "ESPRESSO MARTINI",
+      "classType": "OTHER COCKTAILS (UNDER 48 PROOF)",
+      "completedDate": "06/04/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg"
+      ]
+    },
+    {
+      "ttbId": "25335001000946",
+      "imageCount": 1,
+      "folder": "056-25335001000946",
+      "brandName": "MADWOMAN",
+      "fancifulName": "ESPRESSO MARTINI DECAF",
+      "classType": "OTHER COCKTAILS (UNDER 48 PROOF)",
+      "completedDate": "06/04/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg"
+      ]
+    },
+    {
+      "ttbId": "25336001000189",
+      "imageCount": 2,
+      "folder": "057-25336001000189",
+      "brandName": "RAMAZZOTTI",
+      "fancifulName": "AMARO",
+      "classType": "OTHER HERB & SEED CORDIALS/LIQUEURS",
+      "completedDate": "06/04/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg",
+        "02-back.jpg"
+      ]
+    },
+    {
+      "ttbId": "25337001000061",
+      "imageCount": 2,
+      "folder": "058-25337001000061",
+      "brandName": "BATSON RIVER",
+      "fancifulName": "CLOCK FARM",
+      "classType": "VODKA 80-89 PROOF",
+      "completedDate": "06/05/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg",
+        "02-back.jpg"
+      ]
+    },
+    {
+      "ttbId": "25337001000064",
+      "imageCount": 2,
+      "folder": "059-25337001000064",
+      "brandName": "BATSON RIVER",
+      "fancifulName": "LANGSFORD ROAD",
+      "classType": "STRAIGHT BOURBON WHISKY",
+      "completedDate": "06/05/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg",
+        "02-back.jpg"
+      ]
+    },
+    {
+      "ttbId": "25337001000065",
+      "imageCount": 2,
+      "folder": "060-25337001000065",
+      "brandName": "BATSON RIVER",
+      "fancifulName": "RIPARIAN",
+      "classType": "OTHER GIN",
+      "completedDate": "06/04/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg",
+        "02-back.jpg"
+      ]
+    },
+    {
+      "ttbId": "25337001000442",
+      "imageCount": 3,
+      "folder": "061-25337001000442",
+      "brandName": "KENTUCKY RAMBLER",
+      "fancifulName": "",
+      "classType": "STRAIGHT BOURBON WHISKY",
+      "completedDate": "06/05/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg",
+        "02-back.jpg",
+        "03-neck.png"
+      ]
+    },
+    {
+      "ttbId": "25337001000489",
+      "imageCount": 3,
+      "folder": "062-25337001000489",
+      "brandName": "KENTUCKY RAMBLER",
+      "fancifulName": "",
+      "classType": "STRAIGHT RYE WHISKY",
+      "completedDate": "06/05/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg",
+        "02-back.jpg",
+        "03-neck.png"
+      ]
+    },
+    {
+      "ttbId": "25364001000526",
+      "imageCount": 1,
+      "folder": "063-25364001000526",
+      "brandName": "DEEPAK CELLARS",
+      "fancifulName": "LION'S STRENGTH SHAR DI SHARAAB",
+      "classType": "TABLE WHITE WINE",
+      "completedDate": "06/02/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg"
+      ]
+    },
+    {
+      "ttbId": "25364001000528",
+      "imageCount": 1,
+      "folder": "064-25364001000528",
+      "brandName": "DEEPAK CELLARS",
+      "fancifulName": "RADIANT GRATITUDE MEHERBANI",
+      "classType": "TABLE RED WINE",
+      "completedDate": "06/02/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg"
+      ]
+    },
+    {
+      "ttbId": "25364001000529",
+      "imageCount": 1,
+      "folder": "065-25364001000529",
+      "brandName": "DEEPAK CELLARS",
+      "fancifulName": "PRIDE & GRACE SHAAN",
+      "classType": "TABLE RED WINE",
+      "completedDate": "06/02/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg"
+      ]
+    },
+    {
+      "ttbId": "25364001000530",
+      "imageCount": 1,
+      "folder": "066-25364001000530",
+      "brandName": "DEEPAK CELLARS",
+      "fancifulName": "BILLO BLANC",
+      "classType": "TABLE WHITE WINE",
+      "completedDate": "06/02/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg"
+      ]
+    },
+    {
+      "ttbId": "25364001000531",
+      "imageCount": 1,
+      "folder": "067-25364001000531",
+      "brandName": "DEEPAK CELLARS",
+      "fancifulName": "LIFELONG BONDS MITRA",
+      "classType": "TABLE RED WINE",
+      "completedDate": "06/02/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg"
+      ]
+    },
+    {
+      "ttbId": "26014001000436",
+      "imageCount": 1,
+      "folder": "068-26014001000436",
+      "brandName": "DEEPAK CELLARS",
+      "fancifulName": "GLOW OF LIFE",
+      "classType": "SPARKLING WINE/CHAMPAGNE",
+      "completedDate": "06/02/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg"
+      ]
+    },
+    {
+      "ttbId": "26034001000579",
+      "imageCount": 1,
+      "folder": "069-26034001000579",
+      "brandName": "DEEPAK CELLARS",
+      "fancifulName": "TOAST TO TRIUMPH VADIYAAN",
+      "classType": "TABLE RED WINE",
+      "completedDate": "06/02/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg"
+      ]
+    },
+    {
+      "ttbId": "26042001000534",
+      "imageCount": 1,
+      "folder": "070-26042001000534",
+      "brandName": "DEEPAK CELLARS",
+      "fancifulName": "LION'S STRENGTH SHER DI SHARAAB",
+      "classType": "TABLE WHITE WINE",
+      "completedDate": "06/02/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg"
+      ]
+    },
+    {
+      "ttbId": "26044001000023",
+      "imageCount": 2,
+      "folder": "071-26044001000023",
+      "brandName": "L'ANGELUS",
+      "fancifulName": "",
+      "classType": "TABLE RED WINE",
+      "completedDate": "06/03/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg",
+        "02-back.jpg"
+      ]
+    },
+    {
+      "ttbId": "26058001000176",
+      "imageCount": 1,
+      "folder": "072-26058001000176",
+      "brandName": "FLOR SILVESTRE",
+      "fancifulName": "",
+      "classType": "ROSE WINE",
+      "completedDate": "06/05/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpeg"
+      ]
+    },
+    {
+      "ttbId": "26060001000030",
+      "imageCount": 2,
+      "folder": "073-26060001000030",
+      "brandName": "J.J.&CO.",
+      "fancifulName": "N/A",
+      "classType": "DESSERT /PORT/SHERRY/(COOKING) WINE",
+      "completedDate": "06/02/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg",
+        "02-back.jpg"
+      ]
+    },
+    {
+      "ttbId": "26060001000032",
+      "imageCount": 2,
+      "folder": "074-26060001000032",
+      "brandName": "J.J.& CO.",
+      "fancifulName": "N/A",
+      "classType": "DESSERT /PORT/SHERRY/(COOKING) WINE",
+      "completedDate": "06/02/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg",
+        "02-back.jpg"
+      ]
+    },
+    {
+      "ttbId": "26060001000033",
+      "imageCount": 2,
+      "folder": "075-26060001000033",
+      "brandName": "J.J. & CO.",
+      "fancifulName": "",
+      "classType": "DESSERT /PORT/SHERRY/(COOKING) WINE",
+      "completedDate": "06/02/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg",
+        "02-back.jpg"
+      ]
+    },
+    {
+      "ttbId": "26060001000035",
+      "imageCount": 2,
+      "folder": "076-26060001000035",
+      "brandName": "J.J. & CO.",
+      "fancifulName": "N/A",
+      "classType": "DESSERT /PORT/SHERRY/(COOKING) WINE",
+      "completedDate": "06/02/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg",
+        "02-back.jpg"
+      ]
+    },
+    {
+      "ttbId": "26060001000036",
+      "imageCount": 2,
+      "folder": "077-26060001000036",
+      "brandName": "J.J. & CO.",
+      "fancifulName": "N/A",
+      "classType": "DESSERT /PORT/SHERRY/(COOKING) WINE",
+      "completedDate": "06/02/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg",
+        "02-back.jpg"
+      ]
+    },
+    {
+      "ttbId": "26060001000037",
+      "imageCount": 2,
+      "folder": "078-26060001000037",
+      "brandName": "J.J. & CO.",
+      "fancifulName": "N/A",
+      "classType": "DESSERT /PORT/SHERRY/(COOKING) WINE",
+      "completedDate": "06/02/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg",
+        "02-back.jpg"
+      ]
+    },
+    {
+      "ttbId": "26060001000038",
+      "imageCount": 2,
+      "folder": "079-26060001000038",
+      "brandName": "J.J. & CO.",
+      "fancifulName": "N/A",
+      "classType": "DESSERT /PORT/SHERRY/(COOKING) WINE",
+      "completedDate": "06/02/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg",
+        "02-back.jpg"
+      ]
+    },
+    {
+      "ttbId": "26060001000039",
+      "imageCount": 2,
+      "folder": "080-26060001000039",
+      "brandName": "J.J & CO.",
+      "fancifulName": "",
+      "classType": "DESSERT /PORT/SHERRY/(COOKING) WINE",
+      "completedDate": "06/02/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg",
+        "02-back.jpg"
+      ]
+    },
+    {
+      "ttbId": "26071001000086",
+      "imageCount": 2,
+      "folder": "081-26071001000086",
+      "brandName": "SEVEN SPRINGS WINERY",
+      "fancifulName": "",
+      "classType": "TABLE RED WINE",
+      "completedDate": "06/05/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg",
+        "02-back.jpg"
+      ]
+    },
+    {
+      "ttbId": "26083001000403",
+      "imageCount": 1,
+      "folder": "082-26083001000403",
+      "brandName": "EAGLE'S NEST",
+      "fancifulName": "SQUAW LAKE",
+      "classType": "BOURBON WHISKY",
+      "completedDate": "06/04/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.png"
+      ]
+    },
+    {
+      "ttbId": "26100001000205",
+      "imageCount": 1,
+      "folder": "083-26100001000205",
+      "brandName": "FLAVIAR",
+      "fancifulName": "",
+      "classType": "STRAIGHT BOURBON WHISKY",
+      "completedDate": "06/03/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.png"
+      ]
+    },
+    {
+      "ttbId": "26103001000306",
+      "imageCount": 1,
+      "folder": "084-26103001000306",
+      "brandName": "PUNK ROCK WINE CO.",
+      "fancifulName": "",
+      "classType": "TABLE WHITE WINE",
+      "completedDate": "06/04/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.png"
+      ]
+    },
+    {
+      "ttbId": "26104001000845",
+      "imageCount": 2,
+      "folder": "085-26104001000845",
+      "brandName": "CHACEWATER",
+      "fancifulName": "HIGHLANDER RED WINE",
+      "classType": "TABLE RED WINE",
+      "completedDate": "06/03/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg",
+        "02-back.jpg"
+      ]
+    },
+    {
+      "ttbId": "26106001000870",
+      "imageCount": 2,
+      "folder": "086-26106001000870",
+      "brandName": "GOZZI",
+      "fancifulName": "METODO CLASSICO BRUT",
+      "classType": "SPARKLING WINE/CHAMPAGNE",
+      "completedDate": "06/01/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg",
+        "02-back.jpg"
+      ]
+    },
+    {
+      "ttbId": "26111001000018",
+      "imageCount": 2,
+      "folder": "087-26111001000018",
+      "brandName": "SCHNAUBELT DISTILLERY",
+      "fancifulName": "APPLE MOONSHINE",
+      "classType": "OTHER SPECIALTIES & PROPRIETARIES",
+      "completedDate": "06/01/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.png",
+        "02-back.png"
+      ]
+    },
+    {
+      "ttbId": "26111001000820",
+      "imageCount": 2,
+      "folder": "088-26111001000820",
+      "brandName": "THE HONEY ISLAND SWAMP LEGEND WHISKEY TREE",
+      "fancifulName": "WHITE DOG",
+      "classType": "OTHER SPECIALTIES & PROPRIETARIES",
+      "completedDate": "06/02/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg",
+        "02-back.jpg"
+      ]
+    },
+    {
+      "ttbId": "26117001000298",
+      "imageCount": 1,
+      "folder": "089-26117001000298",
+      "brandName": "SOCIAL & CO",
+      "fancifulName": "FRAGOLA ROSA",
+      "classType": "CARBONATED WINE",
+      "completedDate": "06/03/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg"
+      ]
+    },
+    {
+      "ttbId": "26117001000732",
+      "imageCount": 2,
+      "folder": "090-26117001000732",
+      "brandName": "MAUX COCKTAILS",
+      "fancifulName": "LIMONCELLO",
+      "classType": "OTHER FRUITS & PEELS LIQUEURS",
+      "completedDate": "06/01/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.png",
+        "02-back.png"
+      ]
+    },
+    {
+      "ttbId": "26118001000449",
+      "imageCount": 2,
+      "folder": "091-26118001000449",
+      "brandName": "DOMAINE FRANCOIS RAVENEAU",
+      "fancifulName": "",
+      "classType": "TABLE WHITE WINE",
+      "completedDate": "06/01/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.png",
+        "02-strip.png"
+      ]
+    },
+    {
+      "ttbId": "26119001000324",
+      "imageCount": 2,
+      "folder": "092-26119001000324",
+      "brandName": "LAZARIS ARTISAN DISTILLERY",
+      "fancifulName": "CAMPIELLO KUMQUAT BITTER ROSSO",
+      "classType": "OTHER HERB & SEED CORDIALS/LIQUEURS",
+      "completedDate": "06/03/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg",
+        "02-back.jpg"
+      ]
+    },
+    {
+      "ttbId": "26119001000373",
+      "imageCount": 2,
+      "folder": "093-26119001000373",
+      "brandName": "BIRDIE JUICE",
+      "fancifulName": "ORIGINAL",
+      "classType": "VODKA SPECIALTIES",
+      "completedDate": "06/02/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.png",
+        "02-back.png"
+      ]
+    },
+    {
+      "ttbId": "26119001000606",
+      "imageCount": 1,
+      "folder": "094-26119001000606",
+      "brandName": "O' SHOT DA ALEGRIA",
+      "fancifulName": "CANELAZINHA",
+      "classType": "OTHER SPECIALTIES & PROPRIETARIES",
+      "completedDate": "06/02/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg"
+      ]
+    },
+    {
+      "ttbId": "26119001000621",
+      "imageCount": 2,
+      "folder": "095-26119001000621",
+      "brandName": "ZHUMIR",
+      "fancifulName": "PEACH GUAYTAMBO DURAZNO",
+      "classType": "VODKA SPECIALTIES",
+      "completedDate": "06/04/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg",
+        "02-back.jpg"
+      ]
+    },
+    {
+      "ttbId": "26120001000802",
+      "imageCount": 1,
+      "folder": "096-26120001000802",
+      "brandName": "RIZZ",
+      "fancifulName": "",
+      "classType": "VODKA 80-89 PROOF",
+      "completedDate": "06/02/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.png"
+      ]
+    },
+    {
+      "ttbId": "26121001000116",
+      "imageCount": 2,
+      "folder": "097-26121001000116",
+      "brandName": "PLUM RUN WINERY",
+      "fancifulName": "ALL THAT GLITTERS",
+      "classType": "TABLE FLAVORED WINE",
+      "completedDate": "06/05/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg",
+        "02-back.jpg"
+      ]
+    },
+    {
+      "ttbId": "26125001000699",
+      "imageCount": 2,
+      "folder": "098-26125001000699",
+      "brandName": "FOUR LANTERNS WINERY",
+      "fancifulName": "",
+      "classType": "TABLE WHITE WINE",
+      "completedDate": "06/05/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg",
+        "02-back.jpg"
+      ]
+    },
+    {
+      "ttbId": "26125001000723",
+      "imageCount": 2,
+      "folder": "099-26125001000723",
+      "brandName": "FOUR LANTERNS WINERY",
+      "fancifulName": "",
+      "classType": "DESSERT /PORT/SHERRY/(COOKING) WINE",
+      "completedDate": "06/05/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.jpg",
+        "02-back.jpg"
+      ]
+    },
+    {
+      "ttbId": "26126001000290",
+      "imageCount": 1,
+      "folder": "100-26126001000290",
+      "brandName": "LANDMAN LAGER",
+      "fancifulName": "",
+      "classType": "BEER",
+      "completedDate": "06/04/2026",
+      "images": [
+        "01-brand-front-or-keg-collar.png"
+      ]
+    }
+  ]
+}

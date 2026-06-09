@@ -1,0 +1,33 @@
+{
+  "source": "TTB Public COLA Registry",
+  "sourceUrl": "https://www.ttbonline.gov/colasonline/viewColaDetails.do?action=publicFormDisplay&ttbid=25364001000530",
+  "sampledAt": "2026-06-09T01:28:52.274Z",
+  "search": {
+    "dateCompletedFrom": "06/01/2026",
+    "dateCompletedTo": "06/08/2026"
+  },
+  "row": {
+    "TTB ID": "'25364001000530'",
+    "Permit No.": "BWN-CA-23718",
+    "Serial Number": "25DCSB",
+    "Completed Date": "06/02/2026",
+    "Fanciful Name": "BILLO BLANC",
+    "Brand Name": "DEEPAK CELLARS",
+    "Origin": "01",
+    "Origin Desc": "CALIFORNIA",
+    "Class/Type": "81",
+    "Class/Type Desc": "TABLE WHITE WINE"
+  },
+  "ttbId": "25364001000530",
+  "imageCount": 1,
+  "images": [
+    {
+      "href": "/colasonline/publicViewAttachment.do?filename=SAVBLANC-Billo Blanc.jpg&filetype=l",
+      "filename": "SAVBLANC-Billo Blanc.jpg",
+      "label": "Brand (front) or keg collar",
+      "sourceUrl": "https://www.ttbonline.gov/colasonline/publicViewAttachment.do?filename=SAVBLANC-Billo Blanc.jpg&filetype=l",
+      "file": "01-brand-front-or-keg-collar.jpg",
+      "bytes": 387054
+    }
+  ]
+}

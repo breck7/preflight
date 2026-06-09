@@ -1,0 +1,41 @@
+{
+  "source": "TTB Public COLA Registry",
+  "sourceUrl": "https://www.ttbonline.gov/colasonline/viewColaDetails.do?action=publicFormDisplay&ttbid=26060001000039",
+  "sampledAt": "2026-06-09T01:29:12.262Z",
+  "search": {
+    "dateCompletedFrom": "06/01/2026",
+    "dateCompletedTo": "06/08/2026"
+  },
+  "row": {
+    "TTB ID": "'26060001000039'",
+    "Permit No.": "FL-I-22257",
+    "Serial Number": "260008",
+    "Completed Date": "06/02/2026",
+    "Fanciful Name": "",
+    "Brand Name": "J.J & CO.",
+    "Origin": "62",
+    "Origin Desc": "ARGENTINA",
+    "Class/Type": "88",
+    "Class/Type Desc": "DESSERT /PORT/SHERRY/(COOKING) WINE"
+  },
+  "ttbId": "26060001000039",
+  "imageCount": 2,
+  "images": [
+    {
+      "href": "/colasonline/publicViewAttachment.do?filename=08B- PROHIBITION CONTRA CABERNET FRANC.jpg&filetype=l",
+      "filename": "08B- PROHIBITION CONTRA CABERNET FRANC.jpg",
+      "label": "Brand (front) or keg collar",
+      "sourceUrl": "https://www.ttbonline.gov/colasonline/publicViewAttachment.do?filename=08B- PROHIBITION CONTRA CABERNET FRANC.jpg&filetype=l",
+      "file": "01-brand-front-or-keg-collar.jpg",
+      "bytes": 119734
+    },
+    {
+      "href": "/colasonline/publicViewAttachment.do?filename=08F- PROHIBITION FRENTE.jpg&filetype=l",
+      "filename": "08F- PROHIBITION FRENTE.jpg",
+      "label": "Back",
+      "sourceUrl": "https://www.ttbonline.gov/colasonline/publicViewAttachment.do?filename=08F- PROHIBITION FRENTE.jpg&filetype=l",
+      "file": "02-back.jpg",
+      "bytes": 180300
+    }
+  ]
+}

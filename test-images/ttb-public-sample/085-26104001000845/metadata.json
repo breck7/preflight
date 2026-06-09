@@ -1,0 +1,41 @@
+{
+  "source": "TTB Public COLA Registry",
+  "sourceUrl": "https://www.ttbonline.gov/colasonline/viewColaDetails.do?action=publicFormDisplay&ttbid=26104001000845",
+  "sampledAt": "2026-06-09T01:29:18.859Z",
+  "search": {
+    "dateCompletedFrom": "06/01/2026",
+    "dateCompletedTo": "06/08/2026"
+  },
+  "row": {
+    "TTB ID": "'26104001000845'",
+    "Permit No.": "BWN-CA-16581",
+    "Serial Number": "260012",
+    "Completed Date": "06/03/2026",
+    "Fanciful Name": "HIGHLANDER RED WINE",
+    "Brand Name": "CHACEWATER",
+    "Origin": "01",
+    "Origin Desc": "CALIFORNIA",
+    "Class/Type": "80",
+    "Class/Type Desc": "TABLE RED WINE"
+  },
+  "ttbId": "26104001000845",
+  "imageCount": 2,
+  "images": [
+    {
+      "href": "/colasonline/publicViewAttachment.do?filename=HIGHLANDER FRONT.jpg&filetype=l",
+      "filename": "HIGHLANDER FRONT.jpg",
+      "label": "Brand (front) or keg collar",
+      "sourceUrl": "https://www.ttbonline.gov/colasonline/publicViewAttachment.do?filename=HIGHLANDER FRONT.jpg&filetype=l",
+      "file": "01-brand-front-or-keg-collar.jpg",
+      "bytes": 304724
+    },
+    {
+      "href": "/colasonline/publicViewAttachment.do?filename=HIGHLANDER BACK.jpg&filetype=l",
+      "filename": "HIGHLANDER BACK.jpg",
+      "label": "Back",
+      "sourceUrl": "https://www.ttbonline.gov/colasonline/publicViewAttachment.do?filename=HIGHLANDER BACK.jpg&filetype=l",
+      "file": "02-back.jpg",
+      "bytes": 380505
+    }
+  ]
+}

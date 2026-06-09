@@ -1,0 +1,41 @@
+{
+  "source": "TTB Public COLA Registry",
+  "sourceUrl": "https://www.ttbonline.gov/colasonline/viewColaDetails.do?action=publicFormDisplay&ttbid=26117001000732",
+  "sampledAt": "2026-06-09T01:29:30.835Z",
+  "search": {
+    "dateCompletedFrom": "06/01/2026",
+    "dateCompletedTo": "06/08/2026"
+  },
+  "row": {
+    "TTB ID": "'26117001000732'",
+    "Permit No.": "DSP-CT-21011",
+    "Serial Number": "264274",
+    "Completed Date": "06/01/2026",
+    "Fanciful Name": "LIMONCELLO",
+    "Brand Name": "MAUX COCKTAILS",
+    "Origin": "14",
+    "Origin Desc": "CONNECTICUT",
+    "Class/Type": "609",
+    "Class/Type Desc": "OTHER FRUITS & PEELS LIQUEURS"
+  },
+  "ttbId": "26117001000732",
+  "imageCount": 2,
+  "images": [
+    {
+      "href": "/colasonline/publicViewAttachment.do?filename=Limoncello front.png&filetype=l",
+      "filename": "Limoncello front.png",
+      "label": "Brand (front) or keg collar",
+      "sourceUrl": "https://www.ttbonline.gov/colasonline/publicViewAttachment.do?filename=Limoncello front.png&filetype=l",
+      "file": "01-brand-front-or-keg-collar.png",
+      "bytes": 981708
+    },
+    {
+      "href": "/colasonline/publicViewAttachment.do?filename=Maux Back Congratulations.png&filetype=l",
+      "filename": "Maux Back Congratulations.png",
+      "label": "Back",
+      "sourceUrl": "https://www.ttbonline.gov/colasonline/publicViewAttachment.do?filename=Maux Back Congratulations.png&filetype=l",
+      "file": "02-back.png",
+      "bytes": 119057
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "source": "TTB Public COLA Registry",
+  "sourceUrl": "https://www.ttbonline.gov/colasonline/viewColaDetails.do?action=publicFormDisplay&ttbid=26118001000449",
+  "sampledAt": "2026-06-09T01:29:32.074Z",
+  "search": {
+    "dateCompletedFrom": "06/01/2026",
+    "dateCompletedTo": "06/08/2026"
+  },
+  "row": {
+    "TTB ID": "'26118001000449'",
+    "Permit No.": "CA-I-3734",
+    "Serial Number": "260075",
+    "Completed Date": "06/01/2026",
+    "Fanciful Name": "",
+    "Brand Name": "DOMAINE FRANCOIS RAVENEAU",
+    "Origin": "51",
+    "Origin Desc": "FRANCE",
+    "Class/Type": "81",
+    "Class/Type Desc": "TABLE WHITE WINE"
+  },
+  "ttbId": "26118001000449",
+  "imageCount": 2,
+  "images": [
+    {
+      "href": "/colasonline/publicViewAttachment.do?filename=Raveneau Petit Chablis br2.png&filetype=l",
+      "filename": "Raveneau Petit Chablis br2.png",
+      "label": "Brand (front) or keg collar",
+      "sourceUrl": "https://www.ttbonline.gov/colasonline/publicViewAttachment.do?filename=Raveneau Petit Chablis br2.png&filetype=l",
+      "file": "01-brand-front-or-keg-collar.png",
+      "bytes": 738870
+    },
+    {
+      "href": "/colasonline/publicViewAttachment.do?filename=RWC Burgundy 11-14.png&filetype=l",
+      "filename": "RWC Burgundy 11-14.png",
+      "label": "Strip",
+      "sourceUrl": "https://www.ttbonline.gov/colasonline/publicViewAttachment.do?filename=RWC Burgundy 11-14.png&filetype=l",
+      "file": "02-strip.png",
+      "bytes": 79937
+    }
+  ]
+}

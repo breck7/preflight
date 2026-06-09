@@ -1,0 +1,33 @@
+{
+  "source": "TTB Public COLA Registry",
+  "sourceUrl": "https://www.ttbonline.gov/colasonline/viewColaDetails.do?action=publicFormDisplay&ttbid=25332001000104",
+  "sampledAt": "2026-06-09T01:28:35.262Z",
+  "search": {
+    "dateCompletedFrom": "06/01/2026",
+    "dateCompletedTo": "06/08/2026"
+  },
+  "row": {
+    "TTB ID": "'25332001000104'",
+    "Permit No.": "DSP-CA-20411",
+    "Serial Number": "255004",
+    "Completed Date": "06/03/2026",
+    "Fanciful Name": "AGAVE JERA SIDECAR",
+    "Brand Name": "FRANCESA EST'D. 1993",
+    "Origin": "01",
+    "Origin Desc": "CALIFORNIA",
+    "Class/Type": "649",
+    "Class/Type Desc": "OTHER SPECIALTIES & PROPRIETARIES"
+  },
+  "ttbId": "25332001000104",
+  "imageCount": 1,
+  "images": [
+    {
+      "href": "/colasonline/publicViewAttachment.do?filename=Front.png&filetype=l",
+      "filename": "Front.png",
+      "label": "Brand (front) or keg collar",
+      "sourceUrl": "https://www.ttbonline.gov/colasonline/publicViewAttachment.do?filename=Front.png&filetype=l",
+      "file": "01-brand-front-or-keg-collar.png",
+      "bytes": 1395662
+    }
+  ]
+}

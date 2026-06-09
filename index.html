@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>COLA Preflight</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <div class="mark" aria-hidden="true">★</div>
+        <div>
+          <strong>COLA Preflight</strong>
+          <span>Check your label before submission</span>
+        </div>
+      </div>
+
+      <div class="privacy-note">No login required</div>
+    </header>
+
+    <main class="app">
+      <section id="stage" class="stage" aria-label="Label verification stage">
+        <div id="dropzone" class="dropzone">
+          <div class="upload-actions">
+            <input id="fileInput" type="file" accept="image/*" multiple hidden />
+            <button id="uploadButton" type="button">Upload submission</button>
+            <p>Drop files here to create new submission</p>
+          </div>
+          <div id="thumbStrip" class="thumb-strip" aria-label="Submission queue"></div>
+        </div>
+
+        <div class="status-strip" aria-live="polite">
+          <span id="summaryText">Ready for preflight.</span>
+          <span class="engine-control">
+            <span id="statusText">Ready</span>
+            <select id="engineSelect" aria-label="Analysis engine"></select>
+          </span>
+        </div>
+
+        <div id="labelWrap" class="label-wrap">
+          <img id="labelImage" alt="Alcohol label submission" />
+          <svg id="overlaySvg" aria-hidden="true"></svg>
+          <div id="calloutLayer"></div>
+        </div>
+
+        <details id="metadataPanel" class="metadata-panel">
+          <summary>Metadata</summary>
+          <textarea id="metadataText" readonly aria-label="Submission metadata"></textarea>
+        </details>
+      </section>
+    </main>
+
+    <button id="shortcutFab" class="shortcut-fab" type="button" aria-label="Show keyboard shortcuts">?</button>
+
+    <div id="shortcutModal" class="modal-backdrop hidden" role="presentation">
+      <section class="shortcut-modal" role="dialog" aria-modal="true" aria-labelledby="shortcutTitle">
+        <div class="modal-head">
+          <h2 id="shortcutTitle">Keyboard Shortcuts</h2>
+          <button id="shortcutClose" type="button" aria-label="Close keyboard shortcuts">×</button>
+        </div>
+        <dl class="shortcut-list">
+          <div>
+            <dt><button type="button" data-shortcut-action="help">?</button></dt>
+            <dd>Show keyboard shortcuts</dd>
+          </div>
+          <div>
+            <dt><button type="button" data-shortcut-action="previous">←</button></dt>
+            <dd>Previous submission</dd>
+          </div>
+          <div>
+            <dt><button type="button" data-shortcut-action="next">→</button></dt>
+            <dd>Next submission</dd>
+          </div>
+          <div>
+            <dt><button type="button" data-shortcut-action="rotate">R</button></dt>
+            <dd>Rotate right 90 degrees</dd>
+          </div>
+          <div>
+            <dt><button type="button" data-shortcut-action="zoom">Z</button></dt>
+            <dd>Toggle zoom level</dd>
+          </div>
+          <div>
+            <dt><button type="button" data-shortcut-action="approve">1</button></dt>
+            <dd>Approve submission</dd>
+          </div>
+          <div>
+            <dt><button type="button" data-shortcut-action="needsCorrection">2</button></dt>
+            <dd>Return for correction</dd>
+          </div>
+          <div>
+            <dt><button type="button" data-shortcut-action="reject">3</button></dt>
+            <dd>Reject submission</dd>
+          </div>
+          <div>
+            <dt><button type="button" data-shortcut-action="signingKey">Ctrl K</button></dt>
+            <dd>Enter signing key</dd>
+          </div>
+          <div>
+            <dt><button type="button" data-shortcut-action="escape">Esc</button></dt>
+            <dd>Close shortcuts or clear selected note</dd>
+          </div>
+        </dl>
+      </section>
+    </div>
+
+    <script src="sampleData.js?v=review-shortcuts-1"></script>
+    <script src="scroll.js?v=review-shortcuts-1"></script>
+    <script src="overlay.js?v=review-shortcuts-1"></script>
+    <script src="ai.js?v=review-shortcuts-1"></script>
+    <script src="app.js?v=review-shortcuts-1"></script>
+  </body>
+</html>

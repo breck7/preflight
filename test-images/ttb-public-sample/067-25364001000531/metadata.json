@@ -1,0 +1,33 @@
+{
+  "source": "TTB Public COLA Registry",
+  "sourceUrl": "https://www.ttbonline.gov/colasonline/viewColaDetails.do?action=publicFormDisplay&ttbid=25364001000531",
+  "sampledAt": "2026-06-09T01:28:53.260Z",
+  "search": {
+    "dateCompletedFrom": "06/01/2026",
+    "dateCompletedTo": "06/08/2026"
+  },
+  "row": {
+    "TTB ID": "'25364001000531'",
+    "Permit No.": "BWN-CA-23718",
+    "Serial Number": "25DCTP",
+    "Completed Date": "06/02/2026",
+    "Fanciful Name": "LIFELONG BONDS MITRA",
+    "Brand Name": "DEEPAK CELLARS",
+    "Origin": "01",
+    "Origin Desc": "CALIFORNIA",
+    "Class/Type": "80",
+    "Class/Type Desc": "TABLE RED WINE"
+  },
+  "ttbId": "25364001000531",
+  "imageCount": 1,
+  "images": [
+    {
+      "href": "/colasonline/publicViewAttachment.do?filename=TEMP-Mitra.jpg&filetype=l",
+      "filename": "TEMP-Mitra.jpg",
+      "label": "Brand (front) or keg collar",
+      "sourceUrl": "https://www.ttbonline.gov/colasonline/publicViewAttachment.do?filename=TEMP-Mitra.jpg&filetype=l",
+      "file": "01-brand-front-or-keg-collar.jpg",
+      "bytes": 483791
+    }
+  ]
+}

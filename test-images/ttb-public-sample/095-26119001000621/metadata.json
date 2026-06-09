@@ -1,0 +1,41 @@
+{
+  "source": "TTB Public COLA Registry",
+  "sourceUrl": "https://www.ttbonline.gov/colasonline/viewColaDetails.do?action=publicFormDisplay&ttbid=26119001000621",
+  "sampledAt": "2026-06-09T01:29:37.913Z",
+  "search": {
+    "dateCompletedFrom": "06/01/2026",
+    "dateCompletedTo": "06/08/2026"
+  },
+  "row": {
+    "TTB ID": "'26119001000621'",
+    "Permit No.": "NY-I-1404",
+    "Serial Number": "26ZHDP",
+    "Completed Date": "06/04/2026",
+    "Fanciful Name": "PEACH GUAYTAMBO DURAZNO",
+    "Brand Name": "ZHUMIR",
+    "Origin": "7A",
+    "Origin Desc": "ECUADOR",
+    "Class/Type": "693",
+    "Class/Type Desc": "VODKA SPECIALTIES"
+  },
+  "ttbId": "26119001000621",
+  "imageCount": 2,
+  "images": [
+    {
+      "href": "/colasonline/publicViewAttachment.do?filename=Peach Front Label May 2026.jpg&filetype=l",
+      "filename": "Peach Front Label May 2026.jpg",
+      "label": "Brand (front) or keg collar",
+      "sourceUrl": "https://www.ttbonline.gov/colasonline/publicViewAttachment.do?filename=Peach Front Label May 2026.jpg&filetype=l",
+      "file": "01-brand-front-or-keg-collar.jpg",
+      "bytes": 147825
+    },
+    {
+      "href": "/colasonline/publicViewAttachment.do?filename=Peach Back Label May 2026.jpg&filetype=l",
+      "filename": "Peach Back Label May 2026.jpg",
+      "label": "Back",
+      "sourceUrl": "https://www.ttbonline.gov/colasonline/publicViewAttachment.do?filename=Peach Back Label May 2026.jpg&filetype=l",
+      "file": "02-back.jpg",
+      "bytes": 114349
+    }
+  ]
+}
