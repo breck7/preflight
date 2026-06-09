@@ -35,6 +35,7 @@
   let latestAnalysisRequest = 0;
   let activeStitchedUrl = "";
   let activeRotatedUrl = "";
+  let userSelectedEngine = engineSpecifiedInUrl();
 
   const elements = {
     dropzone: document.getElementById("dropzone"),
@@ -113,6 +114,7 @@
 
     elements.engineSelect.addEventListener("change", () => {
       state.engine = elements.engineSelect.value;
+      userSelectedEngine = true;
       state.selectedFieldId = null;
       runAnalysis();
     });
@@ -316,6 +318,7 @@
   async function useSubmission(submission, options = {}) {
     const requestId = ++latestAnalysisRequest;
     activeSubmissionId = submission.submissionId;
+    if (!userSelectedEngine) state.engine = "local";
     state.status = "loading";
     state.error = null;
     state.fields = [];
@@ -429,6 +432,26 @@
     renderStatus();
 
     try {
+      if (!userSelectedEngine && state.engine === "local") {
+        const cached = await window.getCachedLabelAnalysis(
+          state.image.base64,
+          state.mode,
+          state.applicationData,
+          "openai:gpt-5.5",
+        );
+        if (requestId !== latestAnalysisRequest) return;
+        if (cached) {
+          state.engine = "openai:gpt-5.5";
+          state.fields = cached.fields;
+          state.status = "ready";
+          state.error = null;
+          state.selectedFieldId = null;
+          render();
+          logScroll("cached GPT analysis loaded");
+          return;
+        }
+      }
+
       const result = await window.analyzeLabel(state.image.base64, state.mode, state.applicationData, state.engine);
       if (requestId !== latestAnalysisRequest) return;
       state.fields = result.fields;
@@ -736,6 +759,11 @@
     const params = new URLSearchParams(window.location.search);
     const raw = Number(params.get("rotation") || params.get("rot") || 0);
     return Number.isFinite(raw) ? ((Math.round(raw) % 4) + 4) % 4 : 0;
+  }
+
+  function engineSpecifiedInUrl() {
+    const params = new URLSearchParams(window.location.search);
+    return params.has("engine") || params.has("model");
   }
 
   function updateRotationUrl() {

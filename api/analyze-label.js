@@ -294,13 +294,7 @@ module.exports = async function handler(req, res) {
     return;
   }
 
-  if (!process.env.OPENAI_API_KEY) {
-    appendDebugLog({ requestId, stage: "reject_missing_key" });
-    res.status(500).json({ error: "OPENAI_API_KEY is not configured." });
-    return;
-  }
-
-  const { imageBase64, mode, applicationData, model: requestedModel } = req.body || {};
+  const { imageBase64, mode, applicationData, model: requestedModel, cacheOnly } = req.body || {};
   if (!imageBase64 || !String(imageBase64).startsWith("data:image/")) {
     appendDebugLog({ requestId, stage: "reject_bad_image", mode: mode || "applicant" });
     res.status(400).json({ error: "imageBase64 data URL is required." });
@@ -365,6 +359,26 @@ module.exports = async function handler(req, res) {
   }
 
   appendDebugLog({ requestId, stage: "cache_miss", cacheKey });
+
+  if (cacheOnly) {
+    res.status(404).json({
+      requestId,
+      error: "Cache miss.",
+      debug: {
+        latencyMs: Date.now() - startedAt,
+        model,
+        cache: "miss",
+        cacheOnly: true,
+      },
+    });
+    return;
+  }
+
+  if (!process.env.OPENAI_API_KEY) {
+    appendDebugLog({ requestId, stage: "reject_missing_key" });
+    res.status(500).json({ error: "OPENAI_API_KEY is not configured." });
+    return;
+  }
 
   try {
     const openAIStartedAt = Date.now();

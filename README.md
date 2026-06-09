@@ -8,7 +8,11 @@ It helps producers and importers catch obvious COLA issues before submitting to 
 
 This prototype is intentionally minimal: the label is the interface.
 
+## Screenshot
+
 ![COLA Preflight live prototype](samples/cola-preflight-live.png)
+
+## Infographic from Task Description
 
 ![COLA Preflight infographic](Infographic.png)
 

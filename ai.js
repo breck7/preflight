@@ -10,7 +10,7 @@
     { id: "openai:gpt-5.5", label: "GPT-5.5", provider: "openai", model: "gpt-5.5" },
   ];
 
-  const DEFAULT_AI_ENGINE = searchParams.get("engine") || "local";
+  const DEFAULT_AI_ENGINE = searchParams.get("engine") || searchParams.get("model") || "local";
 
   function normalizeWhitespace(value) {
     return String(value || "").replace(/\s+/g, " ").trim();
@@ -178,6 +178,31 @@
     } finally {
       window.clearTimeout(timeout);
     }
+  }
+
+  async function getCachedLabelAnalysis(imageBase64, mode, applicationData, engineId) {
+    const engine = getEngine(engineId);
+    if (engine.provider !== "openai") return null;
+
+    const response = await fetch("/api/analyze-label", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        imageBase64,
+        mode,
+        model: engine.model,
+        applicationData: mode === "reviewer" ? applicationData : null,
+        cacheOnly: true,
+      }),
+    });
+
+    if (response.status === 404) return null;
+    if (!response.ok) return null;
+    const result = await response.json();
+    if (!result || !Array.isArray(result.fields)) return null;
+    result.fields = validateFields(result.fields, mode, applicationData);
+    result.summary = summarize(result.fields);
+    return result;
   }
 
   async function analyzeWithTesseract(imageBase64, mode) {
@@ -520,4 +545,5 @@
   window.DEFAULT_AI_ENGINE = DEFAULT_AI_ENGINE;
   window.getAIEngineLabel = getAIEngineLabel;
   window.analyzeLabel = analyzeLabel;
+  window.getCachedLabelAnalysis = getCachedLabelAnalysis;
 })();
